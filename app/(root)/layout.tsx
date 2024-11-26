@@ -2,6 +2,7 @@ import FullNav from '@/components/interface/FullNav';
 import type {Metadata} from 'next';
 import localFont from "next/font/local";
 import "@/app/globals.css";
+import { ThemeProvider } from '@/context/ThemeContext';
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -25,11 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return(
-    <html className='dark' lang='en'>
-      <body>
-        <FullNav />
-        {children}
-      </body>
-    </html>
+    <ThemeProvider>
+      <html className='dark' lang='en'>
+        <body>
+          <FullNav />
+          {children}
+        </body>
+      </html>
+    </ThemeProvider>
   )
 }
