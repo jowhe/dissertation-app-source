@@ -1,6 +1,5 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -35,11 +34,17 @@ const SettingsDropdown = () => {
       <DropdownMenuContent>
         <DropdownMenuLabel className="text-center">Page Settings</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem><b>Larger Text</b></DropdownMenuItem>
-        <DropdownMenuItem>Normal Text</DropdownMenuItem>
+        <DropdownMenuGroup title="Accessibility Feature">
+          <DropdownMenuItem><b>Larger Text</b></DropdownMenuItem>
+          <DropdownMenuItem>Normal Text</DropdownMenuItem>
+        </DropdownMenuGroup>
+
         <DropdownMenuSeparator/>
-        <DropdownMenuItem>Dark Mode</DropdownMenuItem>
-        <DropdownMenuItem>Light Mode</DropdownMenuItem>
+
+        <DropdownMenuGroup title="Theme Setting">
+          <DropdownMenuItem>Dark Mode</DropdownMenuItem>
+          <DropdownMenuItem>Light Mode</DropdownMenuItem>
+        </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   )
