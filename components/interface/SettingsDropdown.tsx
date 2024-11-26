@@ -31,7 +31,7 @@ const SettingsDropdown = () => {
 
   return (
     <DropdownMenu onOpenChange={toggle}>
-      <DropdownMenuTrigger className="flex gap-x-3"><FaCog /> {isOpen ? <FaChevronUp /> : <FaChevronDown /> }</DropdownMenuTrigger>
+      <DropdownMenuTrigger className="flex gap-x-1"><FaCog /> {isOpen ? <FaChevronUp size={12} className="mt-auto" /> : <FaChevronDown size={12} className="mt-auto" /> }</DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuLabel className="text-center">Page Settings</DropdownMenuLabel>
         <DropdownMenuSeparator />
