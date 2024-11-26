@@ -1,4 +1,4 @@
-import Navbar from '@/components/interface/navbar';
+import FullNav from '@/components/interface/FullNav';
 import type {Metadata} from 'next';
 import localFont from "next/font/local";
 import "@/app/globals.css";
@@ -27,7 +27,7 @@ export default function RootLayout({
   return(
     <html className='dark' lang='en'>
       <body>
-        <Navbar />
+        <FullNav />
         {children}
       </body>
     </html>

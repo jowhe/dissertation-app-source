@@ -3,20 +3,25 @@ import React from 'react'
 
 import SettingsDropdown from "@/components/interface/SettingsDropdown"
 import { Input } from '../ui/input'
+import UserDropdown from './UserDropdown'
 
-const Navbar = () => {
+const FullNav = () => {
   return (
-    <div className="border-b shadow-lg px-7 py-3">
+    <div className="border-b shadow-lg px-7 py-3 bg-neutral-200 dark:bg-neutral-900">
       <nav className="flex justify-between gap-x-6">
         <Link
           href="/"
         ><h1 className='text-3xl'>Task Tracker</h1></Link>
-        <ul className="flex lg:gap-x-5 lg:justify-evenly border">
+        <ul className="flex flex-col gap-x-9 md:flex-row lg:justify-evenly">
           <li className="my-auto">
             <Input
               type='text'
               placeholder='Search Tasks'
+              className='md:w-[365px]'
             />
+          </li>
+          <li className="my-auto">
+            <UserDropdown />
           </li>
           <li className="my-auto">
             <SettingsDropdown />
@@ -27,4 +32,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default FullNav
