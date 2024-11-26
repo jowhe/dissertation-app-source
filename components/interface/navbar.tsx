@@ -11,22 +11,7 @@ const Navbar = () => {
         <Link
           href="/"
         ><h1 className='text-3xl'>Task Tracker</h1></Link>
-        <ul className="flex lg:gap-x-10 lg:justify-evenly">
-          <li className="my-auto">
-            <Link
-              href="/"
-              ><p>Link</p></Link>
-          </li>
-          <li className="my-auto">
-            <Link
-              href="/"
-              ><p>Link</p></Link>
-          </li>
-          <li className="my-auto">
-            <Link
-              href="/"
-              ><p>Link</p></Link>
-          </li>
+        <ul className="flex lg:gap-x-5 lg:justify-evenly border">
           <li className="my-auto">
             <Input
               type='text'
