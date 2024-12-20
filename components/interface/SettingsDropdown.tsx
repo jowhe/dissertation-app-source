@@ -33,15 +33,15 @@ const SettingsDropdown = () => {
         <DropdownMenuLabel className="text-center">Page Settings</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup title="Accessibility Feature">
-          <DropdownMenuItem onClick={!isLarge ? enableLarge : ()=>{}}><b>Larger Text</b></DropdownMenuItem>
-          <DropdownMenuItem onClick={isLarge ? enableLarge : ()=>{}}>Normal Text</DropdownMenuItem>
+          <DropdownMenuItem onClick={!isLarge ? enableLarge : undefined}><b>Larger Text</b></DropdownMenuItem>
+          <DropdownMenuItem onClick={isLarge ? enableLarge : undefined}>Normal Text</DropdownMenuItem>
         </DropdownMenuGroup>
 
         <DropdownMenuSeparator/>
 
         <DropdownMenuGroup title="Theme Setting">
-          <DropdownMenuItem onClick={isLight ? enableDark : ()=>{}}>Dark Mode</DropdownMenuItem>
-          <DropdownMenuItem onClick={isDark ? enableLight : ()=>{}}>Light Mode</DropdownMenuItem>
+          <DropdownMenuItem onClick={!isDark ? enableDark : undefined}>Dark Mode</DropdownMenuItem>
+          <DropdownMenuItem onClick={!isLight ? enableLight : undefined}>Light Mode</DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
