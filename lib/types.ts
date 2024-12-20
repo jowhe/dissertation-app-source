@@ -14,4 +14,11 @@ type UserTasksCategories = {
   icon: React.ReactNode;
 }
 
-export type {ThemeContextType, UserTasksCategories}
+type UserTaskType = {
+  name: string,
+  category: UserTasksCategories,
+  description: string,
+  deadline: string
+}
+
+export type {ThemeContextType, UserTasksCategories, UserTaskType}
